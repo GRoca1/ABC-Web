@@ -1,4 +1,8 @@
 
+header 
+{
+position: relative;
+}
 #listmenu
 { 
     background-color: #4FB234;
@@ -6,42 +10,53 @@
     padding:0px;
     width: 100%;
     height: 24px;
+    width:100%;
+    height: 26px;
     border-top:2px solid #008000;
     border-bottom: 2px solid #008000;
     top:200px;
     position: absolute;
     z-index: 1000;
-   
 }
 #listmenu ul {
 
-    margin-left: 5% ;
-    margin-right: 5%;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin:0px 0px 0px 0px ;
     padding: 0px;
+    margin:0px 0px 0px 0px;
+    padding: 0px 0px 0px 5%;
 }
 
 #listmenu ul li 
 {
-   float: left;
-   position: relative;
-   list-style: none;
-   background-color: #008000;
-   padding:4px 16px;
-   border-right: 1px solid white;
-
-
+ float: left;
+ position: relative;
+ list-style: none;
+ background-color: #008000;
+ padding:4px 16px;
+border-right: 1px solid white;
 }
-
 #listmenu ul li:first-child 
 {
     border-left: 1px solid white;
 }
-
 #listmenu ul li ul 
 {
-    position: absolute;
+position: absolute;
+z-index: 50;
+}
+#listmenu ul ul li
+{
+width: 100%;
+border-right: 1px solid white;
+border-bottom: 1px solid white;
+border-left: 1px solid white;
+}
+#listmenu ul ul li:first-child
+{
+border-top: 1px solid white;
+}
+#listmenu ul li ul
+{
     margin-top: 4px;
     margin-left: -17px;
     display: none;
@@ -60,11 +75,11 @@
 #listmenu ul ul ul 
 {
     top:-5px;
-    left:200px; 
+    left:230px; 
     z-index:100;
     width:220px;
 }
-#listmenu ul ul li 
+#lismenu ul ul ul li 
 {
 width: 100%;
 }
@@ -77,48 +92,32 @@ width: 100%;
     width: 980px;
     margin-left: auto;
     margin-right: auto;
-    height: 220px;
-    position: relative;
-
 }
-
 #main 
 {
     background-color: #663333;
     width: 980px;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-
-
+    
 }
 #nav2
 {   
     padding-top: 200px;
     background-color: #663333;
-    position:absolute;
+    position:static;
     width: 200px;
+    height: 100%;
     float: left;
 }
-
 #nav2  li {
     padding-left: 20px;
     list-style: none;
-
+   
 }
 aside
 {
 float:right;
-background-color: #663333;
-border-radius: 12px;
-padding: 15px;
-
-}
-#main h1
-{
- float: left;
- padding: 4px 15px;
- margin-right: 50px;
 }
 #nav2 a:link
 {
@@ -135,29 +134,11 @@ font-size: 1.4em;
 
 }
 
-section 
+#main h1{
+
+    padding-top: 20px;
+}
+#main section 
 {
 margin-left: 200px;
-background-color:  #CBD888;
-} 
-
-#main footer
- {
-     
-     padding: 30px;
-     background-color: #006633;
-
 }
-
-.ombre{
-    margin-left: 160px;
-    color : white;
-    font-size: 1.5cm;
-    text-shadow: 5px 5px 58px black;
-    -o-text-shadow: 5px 5px 58px black;
-    -webkit-shadow: 5px 5px 58px black;
-    -ms-shadow: 5px 5px 58px black;
-
-
-
-} 
