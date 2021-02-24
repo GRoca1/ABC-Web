@@ -14,56 +14,29 @@ function controleHexa(chainehexa)
 }
 
 
-var objtxtrouge=document.querySelector("#txtrouge");
+testbtn=document.querySelectorAll('input[type=button]');
+for (var item of testbtn){
+item.addEventListener("click", function(){
+    switch(this.value){
+        case "Rouge":
+document.querySelector("#txtrouge").value='FF';
+ document.querySelector("#txtvert").value='00';
+ document.querySelector("#txtbleu").value='00';
+ document.body.style.background=couleurchange();
+            break;
 
-objtxtrouge.addEventListener("blur",function()
-{
-    if(controleHexa(this.value)==false)
-    {
-        this.value="";
-        this.style.backgroundColor="#880000";
-        alert("veuillez saisir un chiffre entre 0 et 9, ou une lettre de A à F");
-    }
-    else
-   {
-   
-    document.body.style.backgroundColor=couleurchange();
-   }
-});
+        case "Vert":
+document.querySelector("#txtrouge").value='00';
+document.querySelector("#txtvert").value='FF';
+document.querySelector("#txtbleu").value='00';
+document.body.style.background=couleurchange();
+            break;
 
-var objtxtvert=document.querySelector("#txtvert");
-
-objtxtvert.addEventListener("blur",function()
-{
-    if(controleHexa(this.value)==false)
-    {
-        this.value="";
-        this.style.backgroundColor="#880000";
-        alert("veuillez saisir un chiffre entre 0 et 9, ou une lettre de A à F");
-    }
-    else
-   {
-    this.style.backgroundColor="#ffffff"; 
-    document.body.style.backgroundColor=couleurchange();
-   }
-    
-});
-
-var objtxtbleu=document.querySelector("#txtbleu");
-
-objtxtbleu.addEventListener("blur",function()
-{
-    if(controleHexa(this.value)==false)
-    {
-        this.value="";
-        this.style.backgroundColor="#880000";
-        alert("veuillez saisir un chiffre entre 0 et 9, ou une lettre de A à F");
-    }
-    else
-   {
-    this.style.backgroundColor="#ffffff"; 
-    document.body.style.backgroundColor=couleurchange();
-   }
-    
-});
-
+        case "Bleu":
+document.querySelector("#txtrouge").value='00';
+document.querySelector("#txtvert").value='00';
+document.querySelector("#txtbleu").value='FF';
+document.body.style.background=couleurchange();
+            break;}
+;});
+}
